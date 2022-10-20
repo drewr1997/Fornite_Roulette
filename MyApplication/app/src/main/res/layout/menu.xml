@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center">
+
+
+    <Button
+        android:id="@+id/titlemenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimary"
+        android:contextClickable="false"
+        android:elegantTextHeight="false"
+        android:elevation="0dp"
+        android:fadingEdge="horizontal|vertical"
+        android:fontFamily="@font/grobold"
+        android:outlineProvider="none"
+        android:shadowColor="@android:color/transparent"
+        android:text="Fortnite Roulette"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/roulette"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlemenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Roulette"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/vendingmap"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plainmap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Vending Machine Map"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/plainmap"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roulette"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Map"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:text="(Please select an option above)"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8975309518326369/7986538836" />
+
+
+</android.widget.RelativeLayout>

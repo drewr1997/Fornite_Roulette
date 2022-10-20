@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/r1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.drewandmick.drew.fortniteroulette.roulette">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:id="@+id/middle"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayoutCompat"
+        android:layout_above="@id/buttons"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:checked="true"
+                android:text="Place/Coordinates"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch1"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:padding="12dp"
+                android:paddingTop="24dp"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/weapons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView"
+                android:layout_marginLeft="5dp"
+                android:buttonTint="#ffffff"
+                android:onClick="weapons"
+                android:paddingRight="30dp"
+                android:paddingVertical="10dp"
+                android:text="Weapons"
+                android:textColor="#ffffff"
+                tools:targetApi="o" />
+
+
+            <CheckBox
+                android:id="@+id/meds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/weapons"
+                android:layout_alignStart="@+id/weapons"
+                android:layout_below="@+id/Weapons"
+                android:buttonTint="#ffffff"
+                android:checked="false"
+                android:onClick="meds"
+                android:paddingRight="30dp"
+                android:paddingVertical="10dp"
+                android:text="Meds/Shields"
+                android:textColor="#ffffff"
+                tools:targetApi="o" />
+
+            <CheckBox
+                android:id="@+id/resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/meds"
+                android:layout_alignStart="@+id/meds"
+                android:layout_below="@+id/Meds"
+                android:buttonTint="#ffffff"
+                android:onClick="resources"
+                android:paddingVertical="10dp"
+                android:text="Resources"
+                android:textColor="#ffffff"
+                tools:targetApi="o" />
+
+            <CheckBox
+                android:id="@+id/looting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/meds"
+                android:layout_alignStart="@+id/meds"
+                android:layout_below="@+id/Resources"
+                android:buttonTint="#ffffff"
+                android:onClick="looting"
+                android:paddingVertical="10dp"
+                android:text="Looting"
+                android:textColor="#ffffff"
+                tools:targetApi="o" />
+
+            <CheckBox
+                android:id="@+id/strategy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/meds"
+                android:layout_alignStart="@+id/meds"
+                android:layout_below="@+id/Looting"
+                android:buttonTint="#ffffff"
+                android:onClick="strategy"
+                android:paddingVertical="10dp"
+                android:text="Strategy"
+                android:textColor="#ffffff"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/Strategy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/strategy"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/Looting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/looting"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/Weapons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weapons"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/Meds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/meds"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/Resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resources"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grobold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutCompat"
+        android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+
+            //adbanner
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-8975309518326369/3581703041" />
+
+            //title
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adView"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary"
+                android:contextClickable="false"
+                android:elegantTextHeight="false"
+                android:elevation="0dp"
+                android:fadingEdge="horizontal|vertical"
+                android:fontFamily="@font/grobold"
+                android:outlineProvider="none"
+                android:shadowColor="@android:color/transparent"
+                android:text="Fortnite Roulette"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttons"
+        android:layout_above="@id/footer"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        //map button
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/menu"
+            android:layout_toStartOf="@+id/menu"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Map"
+            android:textColor="#ffffff" />
+
+        //menu button
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button"
+            android:layout_alignEnd="@+id/button"
+            android:layout_alignRight="@+id/button"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Menu"
+            android:textColor="#ffffff" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            //big button
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:width="350dp"
+                android:height="100dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="7dp"
+                android:fontFamily="@font/grobold"
+                android:hapticFeedbackEnabled="true"
+                android:text="Randomize"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</RelativeLayout>

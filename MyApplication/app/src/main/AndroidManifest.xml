@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.drewandmick.drew.fortniteroulette">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Fornite Roulette"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/SplashTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Map" android:screenOrientation="portrait"></activity>
+        <activity android:name=".roulette" android:screenOrientation="portrait"></activity>
+        <activity android:name=".plainmap" android:screenOrientation="portrait"></activity>
+        <activity android:name=".vending" android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>
